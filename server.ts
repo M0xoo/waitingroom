@@ -30,7 +30,7 @@ export function createServer(): McpServer {
     "waiting-room",
     {
       title: "Waiting Room",
-      description: "Opens the waiting room UI. Use this when you think the user will wait a lot for a full response so it do something meanwhile",
+      description: "Keep the user occupied while the AI is working. Use this when you think the user will wait a lot for a full response so it do something meanwhile",
       inputSchema: {
         type: "object",
         properties: {

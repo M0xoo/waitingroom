@@ -1,19 +1,31 @@
-# Waiting Room MCP App
+# 🛑 The Waiting Room (MCP App)
 
-![Screenshot](screenshot.png)
+> **"Nothing to do while your AI agent is working?"**
 
-## 🎮 Nothing to do while your AI agent is working?
+We’ve all been there: You ask your coding assistant to build a massive new 100-file feature, and then... you wait. You stare at the spinner. You open Twitter. You close Twitter. You look at the spinner again. It's still spinning. 
 
-We've all been there: you ask your coding assistant to build a massive feature, and then... you wait. Why stare at a loading spinner when you could be clicking a giant cookie? 
+Why waste your life staring at a loading bar when you could be building a massive baking empire? 🍪
 
-**Waiting Room** is an MCP App with a React UI that automatically pops up a fun mini-game hub (featuring a playable Cookie Clicker!) while your AI agent grinds away in the background.
+**Waiting Room** is an MCP (Model Context Protocol) App that automatically intercepts moments of boredom. When your AI is taking forever, your agent can seamlessly trigger this app inside your editor to bring up a fun mini-game hub featuring a fully playable **Cookie Clicker** game, complete with upgrades, auto-clickers, and dopamine. 
 
-> [!TIP]
-> Looking for a vanilla JavaScript example? See [`basic-server-vanillajs`](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-vanillajs)!
+---
 
-## MCP Client Configuration
+## 🎮 Features
 
-Add to your MCP client configuration (stdio transport). Replace the path to match your installation directory:
+- **The Hub**: A slick, dark-mode selection screen to choose your distraction.
+- **Cookie Clicker**: A fully-fledged clicker game built in React!
+  - 🖱️ **Hover Click**: Increase your clicking power.
+  - ⚙️ **Auto Clickers**: Sit back and let the machine bake for you.
+  - 📈 Progressive scaling costs and beautiful UI feedback.
+- **MCP Native**: Integrates seamlessly with any MCP client (like Cursor, VS Code, or your own custom agent environment).
+
+---
+
+## 🚀 Getting Started
+
+To install and play the Waiting Room locally, add this configuration to your MCP client (using the `stdio` transport). 
+
+*Note: Replace `/path/to/waiting-room` with the exact directory where you cloned this repo.*
 
 ```json
 {
@@ -29,30 +41,30 @@ Add to your MCP client configuration (stdio transport). Replace the path to matc
 }
 ```
 
-## Overview
+---
 
-- Tool registration with a linked UI resource
-- React UI using the [`useApp()`](https://apps.extensions.modelcontextprotocol.io/api/functions/_modelcontextprotocol_ext-apps_react.useApp.html) hook
-- App communication APIs: [`callServerTool`](https://apps.extensions.modelcontextprotocol.io/api/classes/app.App.html#callservertool), [`sendMessage`](https://apps.extensions.modelcontextprotocol.io/api/classes/app.App.html#sendmessage), [`sendLog`](https://apps.extensions.modelcontextprotocol.io/api/classes/app.App.html#sendlog), [`openLink`](https://apps.extensions.modelcontextprotocol.io/api/classes/app.App.html#openlink)
+## 🛠️ Development & Customization
 
-## Key Files
+Want to add your own games to the Waiting Room? (Flappy Bird, anyone?) 
 
-- [`server.ts`](server.ts) - MCP server with tool and resource registration
-- [`mcp-app.html`](mcp-app.html) / [`src/mcp-app.tsx`](src/mcp-app.tsx) - React UI using `useApp()` hook
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Getting Started
+2. Watch for changes during development:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm install
-npm run dev
-```
+3. **How It Works**:
+   - The server registers an MCP tool called `waiting-room`.
+   - The tool contains UI metadata (`_meta.ui`) pointing to a bundled HTML app.
+   - The host client intercepts the tool call and renders the React dashboard.
+   - The UI communicates back with the host using the `@modelcontextprotocol/ext-apps` SDK.
 
-## How It Works
+---
 
-1. The server registers a `get-time` tool with metadata linking it to a UI HTML resource (`ui://get-time/mcp-app.html`).
-2. When the tool is invoked, the Host renders the UI from the resource.
-3. The UI uses the MCP App SDK API to communicate with the host and call server tools.
+### Give Your Agent Something To Do While You Play
 
-## Build System
-
-This example bundles into a single HTML file using Vite with `vite-plugin-singlefile` — see [`vite.config.ts`](vite.config.ts). This allows all UI content to be served as a single MCP resource. Alternatively, MCP apps can load external resources by defining [`_meta.ui.csp.resourceDomains`](https://apps.extensions.modelcontextprotocol.io/api/interfaces/app.McpUiResourceCsp.html#resourcedomains) in the UI resource metadata.
+Stop waiting. Start clicking. 🍪
