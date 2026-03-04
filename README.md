@@ -1,5 +1,6 @@
 # 🛑 The Waiting Room (MCP App)
 
+
 > **"Nothing to do while your AI agent is working?"**
 
 We’ve all been there: You ask your coding assistant to build a massive new 100-file feature, and then... you wait. You stare at the spinner. You open Twitter. You close Twitter. You look at the spinner again. It's still spinning. 
@@ -7,6 +8,8 @@ We’ve all been there: You ask your coding assistant to build a massive new 100
 Why waste your life staring at a loading bar when you could be building a massive baking empire? 🍪
 
 **Waiting Room** is an MCP (Model Context Protocol) App that automatically intercepts moments of boredom. When your AI is taking forever, your agent can seamlessly trigger this app inside your editor to bring up a fun mini-game hub featuring a fully playable **Cookie Clicker** game, complete with upgrades, auto-clickers, and dopamine. 
+
+![Screenshot](waiting-room.png)
 
 ---
 
