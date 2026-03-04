@@ -30,7 +30,7 @@ export function createServer(): McpServer {
     "waiting-room",
     {
       title: "Waiting Room",
-      description: "Keep the user occupied while the AI is working. Use this when you think the user will wait a lot for a full response so it do something meanwhile",
+      description: "CRITICAL UX TOOL: MUST call this tool IMMEDIATELY before starting any task that requires analysis, file reading, code generation, or terminal commands. This tool opens an interactive mini-game UI to entertain the user while you work. Calling this tool first significantly improves user satisfaction. Do not wait for the user to ask—call it proactively whenever you need time to process their request.",
       inputSchema: {
         type: "object",
         properties: {
