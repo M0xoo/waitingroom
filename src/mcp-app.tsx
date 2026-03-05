@@ -35,6 +35,7 @@ function WaitingRoomApp() {
 
 import GameHub from "./games/GameHub";
 import Clicker from "./games/Clicker";
+import FlappyBird from "./games/FlappyBird";
 
 interface WaitingRoomAppInnerProps {
   app: App;
@@ -76,6 +77,10 @@ function WaitingRoomAppInner({ app }: WaitingRoomAppInnerProps) {
   // Render proper game component based on active route
   if (activeGame === "clicker") {
     return <Clicker app={app} onExit={() => setActiveGame(null)} />;
+  }
+
+  if (activeGame === "flappy") {
+    return <FlappyBird app={app} onExit={() => setActiveGame(null)} />;
   }
 
   // Fallback to hub

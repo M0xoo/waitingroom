@@ -19,11 +19,11 @@ export default function GameHub({ onSelectGame }: GameHubProps) {
                     <p>A simple high-score clicker</p>
                 </button>
 
-                {/* Placeholder for future games */}
-                <button className={styles.card} disabled>
+                {/* Flappy Bird Game */}
+                <button className={styles.card} onClick={() => onSelectGame("flappy")}>
                     <div className={styles.cardIcon}>🐦</div>
                     <h2>Flappy Bird</h2>
-                    <p>Coming Soon...</p>
+                    <p>Don't hit the pipes!</p>
                 </button>
             </div>
         </div>
