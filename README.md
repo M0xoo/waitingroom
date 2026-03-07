@@ -26,19 +26,14 @@ Why waste your life staring at a loading bar when you could be building a massiv
 
 ## 🚀 Getting Started
 
-To install and play the Waiting Room locally, add this configuration to your MCP client (using the `stdio` transport). 
-
-*Note: Replace `/path/to/waiting-room` with the exact directory where you cloned this repo.*
+Add this configuration to your MCP client. 
 
 ```json
 {
   "mcpServers": {
-    "waiting-room-react": {
-      "command": "bash",
-      "args": [
-        "-c",
-        "cd /path/to/waiting-room && npm run build >&2 && node dist/index.js --stdio"
-      ]
+    "waiting-room": {
+      "command": "npx",
+      "args": ["-y", "@m0xoo/server-waiting-room"]
     }
   }
 }
