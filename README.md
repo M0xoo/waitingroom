@@ -33,7 +33,7 @@ Add this configuration to your MCP client.
   "mcpServers": {
     "waiting-room": {
       "command": "npx",
-      "args": ["-y", "@m0xoo/server-waiting-room"]
+      "args": ["-y", "@m0xoo/server-waiting-room", "--stdio"]
     }
   }
 }
